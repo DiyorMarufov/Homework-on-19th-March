@@ -27,7 +27,7 @@ app.get("/users", (req,res) =>{
 })
 
 
-app.get("/users/:id", (req,res) =>{
+app.get("/users/:id", (req,res,next) =>{
  
     try {
         const {id} = req.params
@@ -54,7 +54,7 @@ app.get("/users/:id", (req,res) =>{
 })
 
 
-app.post("/users", (req,res) =>{
+app.post("/users", (req,res,next) =>{
 
     try {
         const data = req.body
@@ -83,7 +83,7 @@ app.post("/users", (req,res) =>{
 })
 
 
-app.put("/users/:id", (req,res) =>{
+app.put("/users/:id", (req,res,next) =>{
     
     try {
         const {id} = req.params
@@ -114,7 +114,7 @@ app.put("/users/:id", (req,res) =>{
 })
 
 
-app.delete("/users/:id", (req,res) =>{
+app.delete("/users/:id", (req,res,next) =>{
 
     try {
         const {id} = req.params

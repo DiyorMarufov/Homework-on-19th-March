@@ -27,7 +27,7 @@ app.get("/posts", (req,res) =>{
 })
 
 
-app.get("/posts/:id", (req,res) =>{
+app.get("/posts/:id", (req,res,next) =>{
  
     try {
         const {id} = req.params
@@ -55,7 +55,7 @@ app.get("/posts/:id", (req,res) =>{
 })
 
 
-app.post("/posts", (req,res) =>{
+app.post("/posts", (req,res,next) =>{
 
     try {
         const data = req.body
@@ -85,7 +85,7 @@ app.post("/posts", (req,res) =>{
 })
 
 
-app.put("/posts/:id", (req,res) =>{
+app.put("/posts/:id", (req,res,next) =>{
     
     try {
         const {id} = req.params
@@ -116,7 +116,7 @@ app.put("/posts/:id", (req,res) =>{
 })
 
 
-app.delete("/posts/:id", (req,res) =>{
+app.delete("/posts/:id", (req,res,next) =>{
 
     try {
         const {id} = req.params

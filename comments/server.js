@@ -27,7 +27,7 @@ app.get("/comments", (req,res) =>{
 })
 
 
-app.get("/comments/:id", (req,res) =>{
+app.get("/comments/:id", (req,res,next) =>{
  
     try {
         const {id} = req.params
@@ -55,7 +55,7 @@ app.get("/comments/:id", (req,res) =>{
 })
 
 
-app.post("/comments", (req,res) =>{
+app.post("/comments", (req,res,next) =>{
 
     try {
         const data = req.body
@@ -86,7 +86,7 @@ app.post("/comments", (req,res) =>{
 })
 
 
-app.put("/comments/:id", (req,res) =>{
+app.put("/comments/:id", (req,res,next) =>{
     
     try {
         const {id} = req.params
@@ -117,7 +117,7 @@ app.put("/comments/:id", (req,res) =>{
 })
 
 
-app.delete("/comments/:id", (req,res) =>{
+app.delete("/comments/:id", (req,res,next) =>{
 
     try {
         const {id} = req.params
