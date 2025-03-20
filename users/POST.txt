@@ -1,0 +1,1 @@
+{"first_name":"Ahmad2","email":"ahmad@gmail.com","last_name":"Kimdurov","password":"qwe124","phone_number":12234566,"address":"Toshkent","id":"a44e7573-f834-46eb-b949-525e3f44d476"}
